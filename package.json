@@ -14,8 +14,9 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
     "express": "~4.16.1",
+    "hbs": "^4.1.0",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "mongoose": "^5.8.11",
+    "morgan": "~1.9.1"
   }
 }
