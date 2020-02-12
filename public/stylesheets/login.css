@@ -1,0 +1,83 @@
+html {
+  min-height: 100vh;
+}
+
+body {
+  background-image: url(https://images.unsplash.com/photo-1440558547120-1c1cae0397a1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1200);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  font-size: 16px;
+  max-width: 1024px;
+  margin: 0 auto;
+  min-width: 280px;
+  padding-top: 70px;
+}
+
+.card,
+.card-content,
+.card-action {
+  background-color: rgba(255,255,255,0.03);
+  margin: 0;
+}
+
+.login-link span,
+.signup-link span {
+  padding-bottom: .25rem;
+  cursor: pointer;  
+}
+
+.login-link span:hover,
+.signup-link span:hover {
+  border-bottom: 2px solid #bdbdbd;
+}
+
+.login-link.active span,
+.signup-link.active span {
+  border-bottom: 2px solid #ff6f00;
+}
+
+.password-form {
+  margin-bottom: -1rem;
+}
+
+.input-field input[type=email],
+.input-field input[type=password] {
+  font-size: 16px;
+  margin-bottom: .5em;  
+}
+
+.input-field input[type=email]:focus + label,
+.input-field input[type=password]:focus + label {
+  color: #e0e0e0;
+}
+
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 0 0 #eee;
+}
+
+.input-field input[type=email].valid {
+  border-bottom: 1px solid #ff6f00;
+  box-shadow: 0 1px 0 0 #ff6f00;
+}
+
+#password-strength {
+  position: absolute;
+  top: 4px;
+  right: 16px;
+  font-size: 22px;
+}
+
+.help-text {
+  font-size: 12px;
+}
+
+.card-action span:hover {
+  text-decoration: underline;
+}
+
+.forgot-password-row {
+  display: none;
+}
