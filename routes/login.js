@@ -1,4 +1,4 @@
-const express = require('express').Router()
+const router = require('express').Router()
 
 /* GET users listing. */
 router.get('/', (req, res) => {

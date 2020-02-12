@@ -1,46 +1,74 @@
-<div class="container">
-  <div class="row">
-    <div class="col s12 m6 offset-m3">
-      <div class="card hoverable">
-        <div class="card-content grey-text text-lighten-1">
-          <div class="row card-title">
-            <div class="col s6 left-align login-link"><span>Log in</span></div>
-            <div class="col s6 right-align signup-link active"><span>Sign up</span></div>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="stylesheets/login.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- login start -->
+
+
+
+
+<section class="login-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 login-sec">
+        <h2 class="text-center">Login Now</h2>
+
+        <form class="login100-form validate-form">
+          <div class="wrap-input100 validate-input">
+            <span class="label-input100">Username</span>
+            <input class="input100" type="text" name="username" placeholder="Type your username" autocomplete="off"
+              autofocus>
+            <span class="focus-input100"></span>
           </div>
-          <div class="row">
-            <div class="input-field email-field col s12">
-              <input id="email" type="email" class="validate white-text">
-              <label for="email" class="grey-text text-lighten-1">Email</label>
+
+          <div class="wrap-input100 validate-input">
+            <span class="label-input100">Password</span>
+            <input class="input100" type="password" name="pass" placeholder="Type your password">
+            <span class="focus-input100 password"></span>
+          </div>
+
+          <div class="text-right p-t-8 p-b-31">
+            <a href="#">
+              Forgot password?
+            </a>
+          </div>
+
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <button class="btn btn-primary">
+                Login
+              </button>
             </div>
           </div>
-          <div class="row">
-            <form action="." class="col s12 password-form" autocomplete="nope">
-              <div class="row">
-                <div class="input-field password-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <span id="password-strength"></span>
-                  <label for="password">Password</label>
-                  <p class="help-text"></p>
-                </div>
-              </div>
-              <div class="row confirm-password-row">
-                <div class="input-field confirm-password-field col s12">
-                  <input id="confirm-password" type="password" class="validate">
-                  <label for="confirm-password">Confirm Password</label>
-                </div>
-              </div>
-            </form>
+
+          <div class="txt1 text-center p-t-54 p-b-20">
+            <span>
+              Or Sign Up Using
+            </span>
           </div>
-        </div>
-        <div class="card-action center-align">
-          <div class="row">
-            <a class="btn-login btn amber darken-4 waves-effect white-text">Log In</a>
+
+          <div class="flex-c-m">
+            <a href="#" class="login100-social-item bg1">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" class="login100-social-item bg3">
+              <i class="fa fa-google"></i>
+            </a>
           </div>
-          <div class="row forgot-password-row">
-            <span class="amber-text text-darken-4 waves-effect">Forgot Password?</span>
-          </div>
-        </div>
+        </form>
+
+      </div>
+      <div class="col-md-8 banner-sec">
+        <img class="login-img" src=" https://i.pinimg.com/originals/02/8f/ec/028fec979d707186b24c35f0248d7e4b.jpg"
+          alt="botega" srcset="" style="width: 104%; height: auto">
+        <a class="login-img-text" href="/signup">Sign Up</a>
       </div>
     </div>
+
   </div>
-</div>
+
+</section>
+
+<!-- login end -->
