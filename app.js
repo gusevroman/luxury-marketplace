@@ -14,7 +14,7 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
 
 
 //routs
-const indexRouter = require('./routes/index');
+const mainRouter = require('./routes/main');
 const usersRouter = require('./routes/users');
 
 const app = express();
@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', mainRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

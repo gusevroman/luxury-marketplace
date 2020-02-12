@@ -45,4 +45,4 @@ const goodsSchema = new mongoose.Schema({
 })
 
 
-module.exports = model.mongoose('Good', goodsSchema);
+module.exports = mongoose.model('Good', goodsSchema);

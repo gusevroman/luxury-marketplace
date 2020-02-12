@@ -34,10 +34,10 @@ const schemaUser = new mongoose.Schema({
     type: String,
     required: true,
   },
-  sex : {
-    type : String,
-    required: true,
-  }
+  // sex : {
+  //   type : String,
+  //   required: true,
+  // }
 })
 
-module.exports = model.mongoose('User', schemaUser);
+module.exports = mongoose.model('User', schemaUser);
