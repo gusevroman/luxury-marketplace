@@ -18,11 +18,7 @@
         "http-errors": "~1.6.3",
         "mongoose": "^5.8.11",
         "morgan": "~1.9.1",
-        <<
-        << << < HEAD "nodemon": "^2.0.2" ===
-            === =
-            "nodemon": "^2.0.2",
-        "pug": "2.0.0-beta11" >>>
-            >>> > 331 b5fe8c9203614d0987b0e7ecc81c8eef2149f
+        "nodemon": "^2.0.2",
+        "pug": "2.0.0-beta11"
     }
 }
