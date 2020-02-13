@@ -1,0 +1,129 @@
+
+a, a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.map {
+  width: 45%;
+  height: 280px;
+  margin: 20px;
+  box-shadow: 0 0 20px -10px black;
+  border-radius: 20px;
+  /* background: rgb(240, 240, 240); */
+  font-family: 'Montserrat', sans-serif;
+}
+
+#map {
+  width: 65%;
+  height: 380px;
+  display: inline-block
+}
+
+.map-c {
+  float: right;
+  width: 35%;
+  height: 100%;
+  padding: 25px;
+  box-sizing: border-box
+}
+
+h1 {
+  margin: 0;
+  font-weight: normal;
+  color: rgb(60, 60, 70);
+  font-size: 28px
+}
+
+p {
+  font-size: 13px;
+  margin-top: 20px;
+  margin-bottom: 30px
+}
+
+.det {
+  font-size: 12px;
+  margin-bottom: 15px
+}
+
+i {
+  float: left;
+  font-size: 18px !important;
+  margin: 0 8px 0 0
+}
+
+button {
+  margin: 15px 4px;
+  padding: 13px 9px;
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+  color: #546973;
+  border: 2px solid #78909C;
+  transition: all 0.3s;
+  border-radius: 8px;
+  outline:0
+}
+
+button:hover {
+  border-color: rgb(90, 90, 90);
+  color: rgb(90, 90, 90)
+}
+
+button:after {
+  content: 'Price';
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  font-size: 11px;
+  margin-top: 8px
+}
+
+.fa-envelope:after {
+  content:'Chat';
+  margin:8px 13px 0
+}
+
+@media only screen and (max-width: 720px) {
+  .map {
+    height: 450px;
+    margin: calc(50vh - 225px) auto;
+    overflow: hidden
+  }
+  #map {
+    width: 100%;
+    height: 200px;
+  }
+  .map-c {
+    float: right;
+    width: 100%;
+  }
+  button {
+    float: right;
+    margin-top: -75px
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  p {
+    display: none
+  }
+  h1 {
+    margin-bottom:20px
+  }
+  button {
+    float: none;
+    margin-top: 10px
+  }
+  .det {
+    margin-bottom: 9px
+  }
+}

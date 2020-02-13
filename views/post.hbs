@@ -1,0 +1,124 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<form class="form-horizontal" style="visibility:hidden; height: 1px;">
+
+</form>
+
+<form class="form-horizontal" style="" action="/post" method="POST">
+  <fieldset style="display: flex; justify-content: center;">
+
+    <!-- Form Name -->
+    <legend>Add your item</legend>
+
+    <!-- Select Gender -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="sex">Select Gender</label>
+      <div class="col-md-4">
+        <select name="fxmenu" class="form-control" id="sex">
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Brand -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="brand">Select Brand</label>
+      <div class="col-md-4">
+        <select name="fxmenu" class="form-control" id="brand">
+          <option value="Balmain">Balmain</option>
+          <option value="Bottega Veneta">Bottega Veneta</option>
+          <option value="Brioni">Brioni</option>
+          <option value="Brunello Cucinelli">Brunello Cucinelli</option>
+          <option value="Burberry">Burberry</option>
+          <option value="Celine">Celine</option>
+          <option value="Chanel">Chanel</option>
+          <option value="Dior">Dior</option>
+          <option value="Dolce&Gabbana">Dolce&Gabbana</option>
+          <option value="Givenchy">Givenchy</option>
+          <option value="Gucci">Gucci</option>
+          <option value="Jimmy Choo">Jimmy Choo</option>
+          <option value="Louis Vuitton">Louis Vuitton</option>
+          <option value="Prada">Prada</option>
+          <option value="Saint Laurent Paris">Saint Laurent Paris</option>
+          <option value="Moncler">Moncler</option>
+          <option value="Tom Ford">Tom Ford</option>
+          <option value="Valentino">Valentino</option>
+          <option value="Versace">Versace</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Category -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="category">Select Category</label>
+      <div class="col-md-4">
+        <select name="fxmenu" class="form-control" id="category">
+          <option value="footwear">Footwear</option>
+          <option value="outerwear">Outerwear</option>
+          <option value="tops">Tops</option>
+          <option value="bottoms">Bottoms</option>
+          <option value="tailoring">Tailoring</option>
+          <option value="accessories">Accessories</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Style -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="style">Select Style</label>
+      <div class="col-md-4">
+        <select name="fxmenu" class="form-control" id="style">
+          <option value="luxury">Luxury</option>
+          <option value="streetwear">Streetwear</option>
+          <option value="avant Garde">Avant Garde</option>
+          <option value="vintage">Vintage</option>
+          <option value="tech Gear">Tech Gear</option>
+          <option value="minimalist">Minimalist</option>
+        </select>
+      </div>
+    </div>
+
+
+    <!-- Select title -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="title">Title</label>
+      <div class="col-md-4">
+        <input name="estimatedvaluewaste" class="form-control input-md" id="title" required="" type="text"
+          placeholder="Here's your title">
+      </div>
+    </div>
+
+    <!-- Price-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="description">Price</label>
+      <div class="col-md-4">
+        <input name="grossbookvalue" class="form-control input-md" id="description" type="text"
+          placeholder="Here's your price">
+      </div>
+    </div>
+
+    <!-- Description-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Description">Comments, Detailed descriptions</label>
+      <div class="col-md-4">
+        <textarea name="Description" class="form-control" id="Description" placeholder="Describe your item here "
+          required></textarea>
+      </div>
+    </div>
+
+
+    <!-- Add Photo 1-->
+
+    {{> add-photo}}
+
+    <!-- Button -->
+
+    <div style="width: 100%; display: flex; justify-content: center" class="form-group">
+      <button style="background-color: #B95A3A; color: white;" name="submit" class="btn" id="submit">Submit</button>
+    </div>
+
+  </fieldset>
+</form>
