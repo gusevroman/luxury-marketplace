@@ -11,8 +11,8 @@ router.get('/', (req, res) => {
 router.post(
   '/',
   passport.authenticate('local', {
-    failureRedirect: '/badauth',
-    successRedirect: '/account'
+    failureRedirect: '/login',
+    successRedirect: '/posts'
   })
 );
 

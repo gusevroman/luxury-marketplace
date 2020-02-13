@@ -24,7 +24,7 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true , us
 //pasport midlleware
 passport.use(new LocalStrategy(
   async (username, password, done) => {
-    const user = await User.findOne({ login: username });
+    const user = await User.findOne({ fullname: username });
     console.log(password);
 
     console.log(await bcrypt.compare(password, user.password));
