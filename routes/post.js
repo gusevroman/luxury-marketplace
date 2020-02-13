@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/add', (req, res) => {
+router.get('/new-post', (req, res) => {
   res.render(); //отрисовать страницу добавления вещей
 })
 

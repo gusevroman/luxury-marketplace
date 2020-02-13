@@ -16,7 +16,7 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
 //routs
 const mainRouter = require('./routes/main');
 const usersRouter = require('./routes/users');
-const addRouter = require('./routes/add')
+const newPostRouter = require('./routes/add')
 
 const app = express();
 
@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
-app.use('/add', addRouter);
+app.use('/new-post', newPostRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
