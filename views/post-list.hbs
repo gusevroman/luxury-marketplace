@@ -13,11 +13,6 @@
         alt="YEEZY" style="max-width: 100%">
     </div>
     <div class="map-c">
-      {{!-- <h1>ABC Stores</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium id cumque est dolores voluptatibus.</p>
-        <div class="det"><i class="fa fa-map-marker"></i> 102 New Road, New City</div>
-        <div class="det"><i class="fa fa-phone"></i> 001 2045 509</div>
-        <div class="det"><i class="fa fa-globe"></i> www.abcstores.com</div> --}}
       <center>
         <button class="fa fa-rub"> 20000</button>
         <button class="fa fa-envelope"></button>
@@ -32,13 +27,8 @@
         alt="LV">
     </div>
     <div class="map-c">
-      {{!-- <h1>ABC Stores</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium id cumque est dolores voluptatibus.</p>
-        <div class="det"><i class="fa fa-map-marker"></i> 102 New Road, New City</div>
-        <div class="det"><i class="fa fa-phone"></i> 001 2045 509</div>
-        <div class="det"><i class="fa fa-globe"></i> www.abcstores.com</div> --}}
       <center>
-        <button class="fa fa-rub"> 87000</button>
+        <button action="" class="fa fa-rub"> 87000</button>
         <button class="fa fa-envelope"></button>
       </center>
     </div>
@@ -71,5 +61,20 @@
       </center>
     </div>
   </div>
+
+
+  {{#each posts}}
+  <div class="map col">
+    <div id="map">
+      <img style="max-width: 100%; max-height: 250px; object-fit: cover;" src="{{img_link}}" alt="item">
+    </div>
+    <div class="map-c">
+      <center>
+        <button action="/posts/{{_id}}" class="fa fa-rub"> {{price}}</button>
+        <button action="/users/{{userId}}" class="fa fa-envelope"></button>
+      </center>
+    </div>
+  </div>
+  {{/each}}
 
 </div>

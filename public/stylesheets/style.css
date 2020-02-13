@@ -6,4 +6,5 @@ body {
 a, a:hover {
   color:black;
   text-decoration: none;
+  font-weight: bold;
 }
