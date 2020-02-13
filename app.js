@@ -9,17 +9,15 @@ const exphbs = require('express-handlebars');
 // connection with DB
 const mongoDB = 'mongodb+srv://Artem:qwerty51@luxury-shop-6jbkc.mongodb.net/luxury-market';
 
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 
 
 
 //routs
-const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const loginRouter = require('./routes/login');
 const singupRouter = require('./routes/singup');
-const mainRouter = require('./routes/main'); // ??
-const newPostRouter = require('./routes/add')
+const mainRouter = require('./routes/main');
 
 
 const app = express();
@@ -38,12 +36,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/signup', singupRouter);
-app.use('/new-post', newPostRouter);
 
 
 // catch 404 and forward to error handler
