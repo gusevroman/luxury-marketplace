@@ -1,11 +1,16 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router()
 
-router.get('/new-post', (req, res) => {
-  res.render(); //отрисовать страницу добавления вещей
+/* GET users listing. */
+// router.get('/create', (req, res) => {
+//   res.render('posts');
+// });
+
+router.get('/', (req, res) => {
+  res.render('post-list');
 })
 
-
-
+router.get('/id', (req, res) => {
+  res.render('post-id')
+})
 
 module.exports = router;
