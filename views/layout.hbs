@@ -4,55 +4,16 @@
 <head>
   <link rel="stylesheet" href="/stylesheets/normalize.css">
   <link rel="stylesheet" href="/stylesheets/application.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
   <script defer src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script defer src="/js/application.js"></script>
-  <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
 
-  <title>Broccoli Blog</title>
+  <title>Luxury-market</title>
 </head>
 
 <body>
-  <header role="banner" class="mar-t-5 pad-t-2 pad-b-4 pad-s-1 wrap-float bg-white">
-    <div class="max-w-700 center wrap-float">
-      <nav class="clearfix mar-b-1">
-        <ul class="no-bullets no-margin no-padding right">
-          <li class="pipe-separate t-light-green left"><a href="/">home</a></li>
-          {{#if isLoggedIn}}
-          <li class="pipe-separate t-light-green left"><a href="/registration">register</a></li>
-          <li class="pipe-separate t-light-green left"><a href="/login">login</a></li>
-          {{else}}
-          {{!-- <li class="pipe-separate t-light-green left"><a href="/exit">exit</a></li> --}}
-          <form action="/exit" method="post" class="pipe-separate t-light-green left">
-            <input type="hidden" name="_method" value="delete">
-            <button type="submit"
-              style="background-color: transparent; border: none; color:blue; margin-left: 10px;">exit</button>
-          </form>
-          {{/if}}
-        </ul>
-      </nav>
-
-      <div class="logo-container">
-        <img class="logo" src="/images/logo.png" class="center block">
-        <h1>Broccoli Blog</h1>
-      </div>
-    </div>
-  </header>
-  <div class="bg-dk-green pad-t-2 pad-s-1 pad-b-8 mar-b-16 c-white">
-    <div class="max-w-700 center">
-      {{{body}}}
-    </div>
-  </div>
+  {{{body}}}
 </body>
 
 </html>
