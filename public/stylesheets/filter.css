@@ -1,0 +1,138 @@
+/* dropdown-wrapper */
+
+.drp-wrapper {
+	display: flex;
+	justify-content: center;
+  flex-wrap: wrap;
+  border-top: 1px solid black;
+}
+
+/* dropdown-menu */
+
+.drp-menu {
+  text-align: center;
+	margin: 2rem 1rem;
+	max-width: 100%;
+}
+
+@media (min-width: 500px) {
+	.drp-menu {
+		margin: 1rem 2.5rem;
+	}
+}
+
+.drp-menu h3 {
+  margin-left: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+/* select div */
+
+.select {
+    display: inline-block;
+    max-width: 100%;
+		/* make relative to allow absolute positioning of elements */
+    position: relative;
+    z-index: 4;
+}
+
+.select select {
+  	color: inherit;
+		cursor: pointer;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    max-width: 100%;
+    outline: 0;
+    border: 0px;
+		/* more padding on right to allow for drop arrow space */
+		padding: 1rem 3rem 1rem 1rem;
+		/* make relative to allow absolute positioning of elements */
+    position: relative;
+		/* hide webkit arrows */
+		-moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+/* hide ms expand */
+.select select::-ms-expand {
+    display: none
+}
+
+/* add the down pointer, replacing the webkit version */
+.select::after {  
+		right: 1.125em;
+    z-index: 5;
+		border: 3px solid;
+    border-radius: 2px;
+    border-right: 0;
+    border-top: 0;
+    content: "";
+    display: block;
+    height: .625em;
+    margin-top: -.4375em;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    width: .625em;
+}
+
+/* change colour on hover */
+.select:hover::after {
+    border-color: #ff6a00;
+	 	transition-duration: 0.1s;
+}
+
+/* filter data */
+
+.filter-data-container {
+  max-width: 600px;
+  
+}
+
+.filter-data {
+	
+}
+
+
+/* basic */
+
+body {
+	background-color: white;
+	color: black;
+}
+
+.spacey {
+	margin-top: -10px;
+}
+
+/* savage */
+
+#navbar-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+#navbar-link {
+	grid-area: span 1 / span 1;
+	justify-self: end;
+	align-self: center;
+	font-size: 1.75rem;
+}
+
+.savage-text {
+  font-weight: 800;
+  background: #ee0979;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.savage-text:hover {
+	transform: skew(-10deg);
+  transition: all 200ms ease-in-out;
+}
