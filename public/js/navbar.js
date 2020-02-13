@@ -90,8 +90,8 @@
 
     // swipe navigation
     // from http://stackoverflow.com/a/23230280
-    item.addEventListener('touchstart', handleTouchStart, false);
-    item.addEventListener('touchmove', handleTouchMove, false);
+    item.addEventListener('touchstart', handleTouchStart, true);
+    item.addEventListener('touchmove', handleTouchMove, true);
     var xDown = null;
     var yDown = null;
     function handleTouchStart(evt) {
@@ -129,4 +129,8 @@
     init(item);
   });
 
+
+
 })();
+
+
