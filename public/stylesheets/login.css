@@ -268,15 +268,9 @@ input {
   background-color: #ea4335;
 }
 
- /* .login-img {
-  -webkit-filter: grayscale(100%); 
-  filter: grayscale(100%);
-  position: relative;
-}  */
-
-
 
 .login-img {
+  filter: grayscale(100%);
   width: 103%;
   height: 100%;
   border-top-right-radius: 10px;
@@ -296,5 +290,9 @@ input {
   text-decoration: none;
 }
 
+a, a:hover {
+  text-decoration: none;
+  color: black;
+}
 
 
