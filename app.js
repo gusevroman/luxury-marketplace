@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const hbs = require('hbs');
+// const hbs = require('hbs');
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 
@@ -15,13 +15,14 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
 
 
 //routs
-const indexRouter = require('./routes/index');
+// const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const loginRouter = require('./routes/login');
 const singupRouter = require('./routes/singup');
 const postsRouter = require('./routes/post');
-const mainRouter = require('./routes/main'); // ??
-const newPostRouter = require('./routes/add')
+const mainRouter = require('./routes/main');
+const createRouter = require('./routes/create');
+// const newPostRouter = require('./routes/add')
 
 
 const app = express();
@@ -40,13 +41,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+// app.use('/', indexRouter);
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/signup', singupRouter);
 app.use('/posts', postsRouter);
-app.use('/new-post', newPostRouter);
+app.use('/create', createRouter);
+// app.use('/new-post', newPostRouter);
 
 
 // catch 404 and forward to error handler
