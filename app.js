@@ -3,7 +3,6 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const hbs = require('hbs');
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 
