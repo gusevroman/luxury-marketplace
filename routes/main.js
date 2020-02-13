@@ -1,17 +1,32 @@
 const express = require('express');
+const bcrypt = require('bcrypt');
 const router = express.Router();
-const Good = require('../models/goods-schema');
 const User = require('../models/user-schema');
 
-/* GET home page. */
+//protection midlleware
+function isAuth(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next()
+  }
+  res.redirect('/')
+}
+
+
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 
+
 router.post('/', async (req, res) => {
-  const { email, fullname, login, password } = req.body;
-  const newUser = new User({ email, fullname, login, password })
-  await newUser.save();
-  res.redirect('/')
+  const { login, password } = req.body;
+  const hashPassword = await bcrypt.hash(password, 10);
+  try {
+    await User.create({ login, password: hashPassword });
+    res.redirect('/login')
+  } catch (e) {
+    res.status(418).send({ messege: 'Юсер с таким логином уже существует' })
+  }
+
 })
+
 module.exports = router;

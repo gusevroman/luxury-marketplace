@@ -18,22 +18,22 @@ const schemaUser = new mongoose.Schema({
     required: true,
     trim: true,
   },
-  fullname: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  email: {
-    type: String,
-    validate: isEmail,
-    required: true,
-    unique: true,
-    trim: true
-  },
-  phone: {
-    type: String,
-    required: true,
-  },
+  // fullname: {
+  //   type: String,acd
+  //   required: true,
+  //   trim: true,
+  // },
+  // email: {
+  //   type: String,
+  //   validate: isEmail,
+  //   required: true,
+  //   unique: true,
+  //   trim: true
+  // },
+  // phone: {
+  //   type: String,
+  //   required: true,
+  // },
   // sex : {
   //   type : String,
   //   required: true,
