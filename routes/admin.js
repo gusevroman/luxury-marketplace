@@ -1,13 +1,19 @@
-const router = require('express').Router();
-
-/* GET users listing. */
-// router.get('/create', (req, res) => {
-//   res.render('posts');
-// });
+const express = require('express');
+const router = express.Router();
+const passport = require('passport')
 
 router.get('/', (req, res) => {
-  res.render('admin');
+  res.render('admin')
 });
 
+router.post('/')
+
+router.post(
+  '/',
+  passport.authenticate('local', {
+    failureRedirect: '/login',
+    successRedirect: '/'
+  })
+);
 
 module.exports = router;
