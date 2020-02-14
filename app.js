@@ -42,7 +42,7 @@ passport.deserializeUser(async (id, cb) => {
   const user = await User.findOne({ _id: id });
   cb(null, user);
 });
-
+ 
 
 //routs
 const mainPageRouter = require('./routes/main');
