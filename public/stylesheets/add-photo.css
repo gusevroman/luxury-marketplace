@@ -6,6 +6,10 @@
 *
 */
 
+body {
+  height: 100vh;
+}
+
 .input-group {
   position: relative;
   display: flex;
