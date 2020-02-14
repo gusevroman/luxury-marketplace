@@ -1,12 +1,13 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="/stylesheets/post.css">
 
 <form class="form-horizontal" style="visibility:hidden; height: 1px;">
 
 </form>
 
-<form class="form-horizontal" style="" action="/post" method="POST">
+<form class="form-horizontal" action="/item/new" method="POST">
   <fieldset style="display: flex; justify-content: center;">
 
     <!-- Form Name -->
@@ -16,7 +17,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="sex">Select Gender</label>
       <div class="col-md-4">
-        <select name="fxmenu" class="form-control" id="sex">
+        <select name="sex" class="form-control" id="sex">
           <option value="female">Female</option>
           <option value="male">Male</option>
         </select>
@@ -27,7 +28,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="brand">Select Brand</label>
       <div class="col-md-4">
-        <select name="fxmenu" class="form-control" id="brand">
+        <select name="brand" class="form-control" id="brand">
           <option value="Balmain">Balmain</option>
           <option value="Bottega Veneta">Bottega Veneta</option>
           <option value="Brioni">Brioni</option>
@@ -55,7 +56,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="category">Select Category</label>
       <div class="col-md-4">
-        <select name="fxmenu" class="form-control" id="category">
+        <select name="category" class="form-control" id="category">
           <option value="footwear">Footwear</option>
           <option value="outerwear">Outerwear</option>
           <option value="tops">Tops</option>
@@ -66,28 +67,21 @@
       </div>
     </div>
 
-    <!-- Select Style -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="style">Select Style</label>
-      <div class="col-md-4">
-        <select name="fxmenu" class="form-control" id="style">
-          <option value="luxury">Luxury</option>
-          <option value="streetwear">Streetwear</option>
-          <option value="avant Garde">Avant Garde</option>
-          <option value="vintage">Vintage</option>
-          <option value="tech Gear">Tech Gear</option>
-          <option value="minimalist">Minimalist</option>
-        </select>
-      </div>
-    </div>
-
-
     <!-- Select title -->
     <div class="form-group">
       <label class="col-md-4 control-label" for="title">Title</label>
       <div class="col-md-4">
-        <input name="estimatedvaluewaste" class="form-control input-md" id="title" required="" type="text"
+        <input name="title" class="form-control input-md" id="title" required="" type="text"
           placeholder="Here's your title">
+      </div>
+    </div>
+
+    <!-- Select size -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="title">Size</label>
+      <div class="col-md-4">
+        <input name="size" class="form-control input-md" id="title" required="" type="text"
+          placeholder="Here's your size">
       </div>
     </div>
 
@@ -95,8 +89,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="description">Price</label>
       <div class="col-md-4">
-        <input name="grossbookvalue" class="form-control input-md" id="description" type="text"
-          placeholder="Here's your price">
+        <input name="price" class="form-control input-md" id="description" type="text" placeholder="Here's your price">
       </div>
     </div>
 
@@ -104,7 +97,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="Description">Comments, Detailed descriptions</label>
       <div class="col-md-4">
-        <textarea name="Description" class="form-control" id="Description" placeholder="Describe your item here "
+        <textarea name="description" class="form-control" id="Description" placeholder="Describe your item here "
           required></textarea>
       </div>
     </div>

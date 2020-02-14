@@ -8,7 +8,7 @@ const goodsSchema = new mongoose.Schema({
   },
   price: {
     // Goods price
-    type: Number,
+    type: String, // number
     required: true,
   },
   description: {
@@ -21,7 +21,7 @@ const goodsSchema = new mongoose.Schema({
     type: Boolean,
   },
   image: {
-    //?????
+    type: Buffer
   },
   userID: {
     type: { type: mongoose.Schema.Types.ObjectId, ref: 'User'},
@@ -39,7 +39,7 @@ const goodsSchema = new mongoose.Schema({
     type : String,
     required: true,
   },
-  style: {
+  category: {
     type : String
   }
 })

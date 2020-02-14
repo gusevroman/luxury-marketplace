@@ -1,17 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const Good = require('../models/goods-schema');
-const User = require('../models/user-schema');
 
-/* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('slider');
 });
 
-router.post('/', async (req, res) => {
-  const { email, fullname, login, password } = req.body;
-  const newUser = new User({ email, fullname, login, password })
-  await newUser.save();
+
+router.get('/checkUser', async (req, res) => {
+  const { user } = req;
+  await res.json(user);
+})
+
+router.get('/logout', (req, res) => {
+  req.session.destroy();
   res.redirect('/')
 })
+
+
 module.exports = router;

@@ -8,18 +8,37 @@
 
 body {
     /* background: #111; */
-    font-weight: 500;
-    font-size: 1.05em;
+    /* font-weight: 500;
+  font-size: 1.05em; */
+    font-size: -moz-calc(4px + 0.45vw);
+    font-size: -webkit-calc(4px + 0.45vw);
+    font-size: calc(4px + 0.45vw);
     font-family: 'Raleway', Arial, sans-serif;
 }
 
+header {
+    line-height: 12rem;
+    height: 12rem;
+}
+
 .main {
-  width: 100%;
+    width: 100%;
 }
 
 #container {
     position: absolute;
     width: 710px;
+    height: 5em;
+    left: 50%;
+    top: 60%;
+    margin-left: -355px;
+    margin-top: -2.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    =======position: absolute;
+    width: 110rem;
     height: 5em;
     left: 50%;
     top: 60%;
