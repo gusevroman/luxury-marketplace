@@ -22,7 +22,7 @@ const singupRouter = require('./routes/singup');
 const postsRouter = require('./routes/post');
 const mainRouter = require('./routes/main');
 const createRouter = require('./routes/create');
-// const newPostRouter = require('./routes/add')
+const adminRouter = require('./routes/admin')
 
 
 const app = express();
@@ -41,7 +41,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', indexRouter);
+app.use('/admin', adminRouter);
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);

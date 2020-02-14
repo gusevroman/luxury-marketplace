@@ -1,0 +1,84 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script defer src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script defer src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="stylesheets/admin-list.css">
+<script defer src="/js/post-list.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+{{!-- {{> filter}} --}}
+
+<div class="container">
+  <div class="map col">
+    <div id="map">
+      <img class="post-img"
+        src="https://stockx-360.imgix.net/Adidas-Yeezy-Boost-350-V2-Zebra/Images/Adidas-Yeezy-Boost-350-V2-Zebra/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1578503931&w=1000"
+        alt="YEEZY" style="max-width: 100%">
+    </div>
+    <div class="map-c">
+      <center>
+        <button class="btn-accept" action="Accept">Accept</button>
+        <button class="btn-block" action="Block">Block</button>
+      </center>
+      <div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map col">
+    <div id="map">
+      <img style="max-width: 100%; max-height: 250px; object-fit: cover;"
+        src="https://ru.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton--N41719_2_PM1_Side%20view.jpg"
+        alt="LV">
+    </div>
+    <div class="map-c">
+      <center>
+        <button class="btn-accept" action="Accept">Accept</button>
+        <button class="btn-block" action="Block">Block</button>
+      </center>
+    </div>
+  </div>
+
+  <div class="map col">
+    <div id="map">
+      <img style="max-width: 100%; max-height: 250px; object-fit: cover;"
+        src="https://ru.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton--N41719_2_PM1_Side%20view.jpg"
+        alt="LV">
+    </div>
+    <div class="map-c">
+      <center>
+        <button class="btn-accept" action="Accept">Accept</button>
+        <button class="btn-block" action="Block">Block</button>
+      </center>
+    </div>
+  </div>
+
+  <div class="map col">
+    <div id="map">
+      <img style="max-width: 100%; max-height: 250px; object-fit: cover;"
+        src="https://ru.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton--N41719_2_PM1_Side%20view.jpg"
+        alt="LV">
+    </div>
+    <div class="map-c">
+      <center>
+        <button class="btn-accept" action="Accept">Accept</button>
+        <button class="btn-block" action="Block">Block</button>
+      </center>
+    </div>
+  </div>
+
+
+  {{#each posts}}
+  <div class="map col">
+    <div id="map">
+      <img style="max-width: 100%; max-height: 250px; object-fit: cover;" src="{{img_link}}" alt="item">
+    </div>
+    <div class="map-c">
+      <center>
+        <button class="btn-accept" action="/posts/{{_id}}" class=""> {{checked}}</button>
+        <button class="btn-block" action="/users/{{_id}}" class="">{{checked}}</button>
+      </center>
+    </div>
+  </div>
+  {{/each}}
+
+</div>
