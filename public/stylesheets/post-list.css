@@ -76,7 +76,7 @@ button {
   cursor: pointer;
   background: none;
   color: #546973;
-  border: 2px solid #78909C;
+  border: 2px solid black;
   transition: all 0.3s;
   border-radius: 8px;
   outline:0
