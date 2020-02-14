@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const Goods = require('../models/goods-schema')
 
-router.get('/', (req, res) => {
-  const { sex, brand, category, style } = req.body;
-  console.log(sex, brand, category, style);
-
+router.get('/', async (req, res) => {
+  const { sex, brand, category, style } = req.query;
+  const filteredGoods = await Goods.find({sex})
+  
+  res.json(filteredGoods)
 })
 
 module.exports = router;

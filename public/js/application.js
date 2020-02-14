@@ -1,18 +1,25 @@
 
 
-// //Listening on filters
-const sex = document.getElementById('sex');
-const brand = document.getElementById('brand');
-const brand = document.getElementById('brand');
-const brand = document.getElementById('brand');
+// Fetch with filters
 
-// console.log(sex);
+const filterForm = document.getElementById('filter-form');
 
+filterForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const sex = document.getElementById('sex').value;
+  const brand = document.getElementById('brand').value;
+  const style = document.getElementById('style').value;
+  const category = document.getElementById('category').value;
+  
 
-// sex.addEventListener('click', (event) => {
-//   const gender = event.target.value;
+  const url = `/filter?sex=${sex}&brand=${brand}&category=${category}&style=${style}`;
 
-// })
+  const response = await fetch(url);
+  const filteredGood = await response.json();
+  console.log(filteredGood);
+  
+
+})
 
 
 

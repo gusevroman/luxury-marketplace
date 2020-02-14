@@ -136,3 +136,26 @@ body {
 	transform: skew(-10deg);
   transition: all 200ms ease-in-out;
 }
+
+
+#search {
+  width: 5vw;
+  height: 3vh;
+  position: absolute;
+  right: 20vw;
+  margin-top: -6vh;
+  border: 2px solid black;;
+  border-radius: 2px;
+  outline: none;
+  font-weight: bold;
+  font-size: 150%;
+  background-color: transparent;
+  height: 40px;
+
+  transition: all .2s;
+}
+
+#search:hover {
+  background-color: black;
+  color: white;
+}
