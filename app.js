@@ -19,7 +19,7 @@ const User = require('./models/user-schema')
 
 // connection with DB
 const mongoDB = 'mongodb+srv://Artem:qwerty51@luxury-shop-6jbkc.mongodb.net/luxury-market';
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true , useCreateIndex: true})
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 
 //pasport midlleware
 passport.use(new LocalStrategy(
@@ -68,6 +68,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({
+  name: 'token',
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,

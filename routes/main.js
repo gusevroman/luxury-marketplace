@@ -6,4 +6,15 @@ router.get('/', function (req, res, next) {
 });
 
 
+router.get('/checkUser', async (req, res) => {
+  const { user } = req;
+  await res.json(user);
+})
+
+router.get('/logout', (req, res) => {
+  req.session.destroy();
+  res.redirect('/')
+})
+
+
 module.exports = router;
