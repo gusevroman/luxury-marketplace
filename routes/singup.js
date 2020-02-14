@@ -5,6 +5,10 @@ router.get('/', (req, res) => {
   res.render('signup');
 });
 
+router.post('/', (req, res) => {
+  // const { username }
+})
+
 module.exports = router;
 
 

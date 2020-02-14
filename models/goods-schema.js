@@ -21,7 +21,8 @@ const goodsSchema = new mongoose.Schema({
     type: Boolean,
   },
   image: {
-    type: Buffer
+    data: Buffer,
+    contentType: String
   },
   userID: {
     type: { type: mongoose.Schema.Types.ObjectId, ref: 'User'},
