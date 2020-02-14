@@ -81,14 +81,15 @@ header li a {
     margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 800px) {
+
+/* @media screen and (max-width: 800px) {
     header ul li:not(:nth-child(4)) {
         display: none;
     }
     header ul li:nth-child(4) {
         width: 100%;
     }
-}
+} */
 
 
 /* Slider Style
@@ -282,10 +283,10 @@ nav {
     .content {
         padding-right: 2rem;
     }
-    nav {
+    /* nav {
         left: 0;
         right: auto;
-    }
+    } */
 }
 
 .ul-header {
