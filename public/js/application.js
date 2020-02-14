@@ -1,10 +1,10 @@
 
 
 // //Listening on filters
-// const sex = document.getElementById('sex');
-// const brand = document.getElementById('brand');
-// const brand = document.getElementById('brand');
-// const brand = document.getElementById('brand');
+const sex = document.getElementById('sex');
+const brand = document.getElementById('brand');
+const brand = document.getElementById('brand');
+const brand = document.getElementById('brand');
 
 // console.log(sex);
 
@@ -15,8 +15,4 @@
 // })
 
 
-
-const filters = document.querySelectorAll('.select').values;
-
-console.log(filters);
 
