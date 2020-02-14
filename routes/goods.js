@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', function (req, res, next) {
-  res.render('slider');
-});
+router.get('/', (req, res) => {
+  res.render('goods')
+})
+
 
 
 module.exports = router;

@@ -25,10 +25,6 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true , us
 passport.use(new LocalStrategy(
   async (username, password, done) => {
     const user = await User.findOne({ fullname: username });
-    console.log(password);
-
-    console.log(await bcrypt.compare(password, user.password));
-
     if (!user) {
       return done(null, false);
     } else if (await bcrypt.compare(password, user.password)) {
@@ -49,12 +45,12 @@ passport.deserializeUser(async (id, cb) => {
 
 
 //routs
-const usersRouter = require('./routes/users');
+const mainPageRouter = require('./routes/main');
 const loginRouter = require('./routes/login');
+const goodsRouter = require('./routes/goods');
+const itemRouter = require('./routes/item');
 const singupRouter = require('./routes/singup');
-const postsRouter = require('./routes/post');
-const mainRouter = require('./routes/main');
-const createRouter = require('./routes/create');
+const filterRouter = require('./routes/filter');
 
 
 const app = express();
@@ -80,14 +76,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-app.use('/', mainRouter);
-app.use('/users', usersRouter);
+app.use('/', mainPageRouter);
 app.use('/login', loginRouter);
+app.use('/goods', goodsRouter);
 app.use('/signup', singupRouter);
-app.use('/posts', postsRouter);
-app.use('/create', createRouter);
-
+app.use('/item', itemRouter);
+app.use('/filter', filterRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
