@@ -5,7 +5,7 @@
 Упростить коммуникацию, между покупателями и продавцами премиальный вещей
 
 ## Скриншоты
-![Страница авторизации](/public/screenshots) 
+![Скриншоты](/public/screenshots/change-yourself-21days.gif) 
 
 ## Getting Started
 ```
