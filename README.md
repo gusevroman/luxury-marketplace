@@ -1,11 +1,11 @@
-## [Luxary-Marketplace](https://luxury-store-web.herokuapp.com/)
-**Luxary-Marketplace** - Сервис для поиска вещей люксовых брендов на вторичном рынке
+## [Luxury-Marketplace](https://luxury-store-web.herokuapp.com/)
+**Luxary-Marketplace** - Service for the sale of luxury brands in the secondary market
 
-## Цель приложения
-Упростить коммуникацию, между покупателями и продавцами премиальный вещей
+## Purpose of the application
+Simplify communication between buyers and sellers of premium items
 
-## Скриншоты
-![Скриншоты](/public/screenshots/change-yourself-21days.gif) 
+## Screenshots
+![Screenshots](/public/screenshots/change-yourself-21days.gif) 
 
 ## Getting Started
 ```
@@ -13,19 +13,19 @@ npm install
 npm start
 ```
 
-## MVP функциональность
-* Личный кабинет 
-* Загрузка товаров пользователем
-* Модерация товаров администратором
-* Поиск товаров по категориям и тегам
+## MVP functionality
+* Personal Area
+* User uploads
+* Moderation of goods by the administrator
+* Search for products by category and tag
 
-## Авторы 
-- [Кирилл Дегтярев](https://github.com/keerji)
-- [Айрат Маннанов](https://github.com/AiratMannanov)
-- [Артем Беляев](https://github.com/Oberin98)
-- [Роман Гусев](https://github.com/gusevroman)
+## Authors 
+- [Kirill Degtyarev](https://github.com/keerji)
+- [Airat Mannanov](https://github.com/AiratMannanov)
+- [Artem Belyaev](https://github.com/Oberin98)
+- [Roman Gusev](https://github.com/gusevroman)
 
-## Дальнейшие планы
-* Адаптивная верстка
-* Мобильное приложение
+## Future plans
+* Adaptive layout
+* Mobile app
 
